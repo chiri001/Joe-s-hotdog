@@ -6,6 +6,39 @@ let numDogs = prompt('How many Hotdogs do you want? ($3.75 /hotdog)');
 let numFries = prompt('How many bag of fries do you want? ($3.00 /fries)');
 let numSoda = prompt('How many soda cans do you want? ($2.50 /soda)');
 
+//checking for an empty imput or cancel response
+if (numDogs === null || numDogs.trim() === '') {
+    numDogs = 0;
+} else {
+    numDogs = parseInt(numDogs);
+    //if input is not a number
+    if (isNaN(numDogs)) {
+        numDogs = 0;
+    }
+}
+
+//checking for an empty imput or cancel response
+if (numFries === null || numFries.trim() === '') {
+    numFries = 0;
+} else {
+    numFries = parseInt(numFries);
+    //if input is not a number
+    if (isNaN(numFries)) {
+        numFries = 0;
+    }
+}
+
+//checking for an empty imput or cancel response
+if (numSoda === null || numSoda.trim() === '') {
+    numSoda = 0;
+} else {
+    numSoda = parseInt(numSoda);
+    //if input is not a number
+    if (isNaN(numSoda)) {
+        numSoda = 0;
+    }
+}
+
 let hot_dog_total = Hot_dog_price * numDogs;
 let fries_total = fries_price * numFries;
 let soda_total = soda_price * numSoda;

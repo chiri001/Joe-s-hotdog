@@ -11,6 +11,7 @@ html {
 
 body {
     overflow-x: hidden; /*avoid overflow on the x axis*/
+    overflow-y: hidden;
 }
 
 .head {
@@ -168,6 +169,9 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
+    #home {
+        height: auto;
+    }
     .home-items {
         flex-direction: column;
     }
@@ -182,12 +186,6 @@ body {
     }
     .payment {
         flex-basis: 100%;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    #home {
-        height: auto;
     }
 }
 
