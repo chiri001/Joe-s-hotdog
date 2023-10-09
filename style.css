@@ -16,6 +16,7 @@ body {
 .head {
     display: flex;
     justify-content: center;
+    text-align: center;
     width: 100%;
     z-index: 10;
     position: sticky;
@@ -47,41 +48,40 @@ body {
 .home-text {
     display: flex;
     flex-basis: 30%;
-    width: 30%;
     justify-content: center;
     flex-direction: column;
     height: 40%;
-    padding: 20px;
+    margin: 4%;
+    padding: 2%;
     border-radius: 10px;
     background-color: #dde5db;
-    margin: 20px;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /*adding shadow around */
 }
 
 .home-text h1 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #ad140e;
-    padding: 10px;
+    padding: 3%;
 }
 
 .home-text h2 {
-    font-size: 35px;
+    font-size: 25px;
     color: #09700e;
-    padding: 5px;
+    padding: 3%;
 }
 
 .home-text p {
-    font-size: 30px;
+    font-size: 23px;
     color: #09700e;
-    padding: 5px;
+    padding: 3%;
 }
 
 .btn {
-    margin-top: 40px;
+    margin-top: 20px;
     background-color: rgb(150, 2, 2);
     border-radius: 10px; /*remove sharp vertices*/
-    font-size: 20px;
+    font-size: 18px;
     color: rgba(255, 235, 205, 0.894); /*button-text color*/
     padding: 15px 30px; /*space text from edges*/
     cursor: pointer; /*chnages pointer to hand icos */
@@ -89,41 +89,31 @@ body {
 }
 
 .btn:hover {
-    background-color: rgb(247, 8, 8);
+    background-color: #09700e;
+}
+
+.payment {
+    flex-basis: 60%;
 }
 
 .menu {
-    flex-basis: 40%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
 }
 
 .menu-image {
-    padding: 10px;
+    padding: 1%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .menu-image img {
-    width: 300px;
-    height: 200px;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
 }
 
-.item {
-    position: absolute;
-    color: #ad140e;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-}
 .footer {
     width: 100%;
     text-align: center;
@@ -140,38 +130,91 @@ body {
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /*adding shadow around */
 }
 
-.item-header {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 10%;
-    margin: 10px;
-    color: #ad140e;
-    font-size: 25px;
-}
-
-.item-details {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 12%;
-    padding-bottom: 5px;
-    margin: 10px;
-    font-size: 20px;
-    color: #09700e;
-}
-
+.item-header,
+.item-details,
 .amount-info {
     display: flex;
     justify-content: space-between;
-    margin: 10px;
-    padding-right: 12%;
-    padding-bottom: 5px;
-    font-size: 20px;
+    padding: 1%;
+    align-items: center;
+}
+
+.item-header h2,
+.item-details h2 {
+    flex-basis: 25%;
+}
+
+.amount-info h2 {
+    flex-basis: 25%;
+}
+
+.item-header {
+    color: #ad140e;
+    border-bottom: 2px solid #ad140e;
+}
+
+.item-details,
+.amount-info {
     color: #09700e;
 }
 
-.item-header h1,
-.item-details h2,
-.amount-info h2 {
-    flex: 1;
-    text-align: center;
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.button a {
+    padding: 2%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .home-items {
+        flex-direction: column;
+    }
+
+    .home-text {
+        flex-basis: 100%;
+    }
+
+    .home-text h1 {
+        width: 100%;
+        text-align: center;
+    }
+    .payment {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #home {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .home-text h1 {
+        width: 100%;
+        text-align: center;
+    }
+    .home-text h2 {
+        width: 100%;
+        text-align: center;
+    }
+    .home-text p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .item-details h2,
+    .amount-info h2 {
+        font-size: 20px;
+    }
+
+    .button a {
+        padding: 1%;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
 }
