@@ -2,15 +2,17 @@ let Hot_dog_price = 3.75;
 let fries_price = 3;
 let soda_price = 2.5;
 
-check_input = (input_info) => {
+check_input = (input_info, prompt_qn) => {
     //checking for an empty imput or cancel response
-    if (input_info === null || input_info.trim() === '') {
+    if (input_info === null) {
         return 0;
     } else {
+        let input_string = input_info;
         input_info = parseInt(input_info);
         //if input is not a number
-        if (isNaN(input_info)) {
-            return 0;
+        if (input_string.trim() === '' || isNaN(input_info)) {
+            alert('Please enter a valid number...');
+            return check_input(prompt(prompt_qn));
         } else {
             return input_info;
         }
@@ -18,13 +20,16 @@ check_input = (input_info) => {
 };
 
 let numDogs = check_input(
-    prompt('How many Hotdogs do you want? ($3.75 /hotdog)')
+    prompt('How many Hotdogs do you want? ($3.75 /hotdog)'),
+    'How many Hotdogs do you want? ($3.75 /hotdog)'
 );
 let numFries = check_input(
-    prompt('How many bag of fries do you want? ($3.00 /fries)')
+    prompt('How many bag of fries do you want? ($3.00 /fries)'),
+    'How many bag of fries do you want? ($3.00 /fries)'
 );
 let numSoda = check_input(
-    prompt('How many soda cans do you want? ($2.50 /soda)')
+    prompt('How many soda cans do you want? ($2.50 /soda)'),
+    'How many soda cans do you want? ($2.50 /soda)'
 );
 
 let hot_dog_total = Hot_dog_price * numDogs;
@@ -68,7 +73,7 @@ if (total_order > 25) {
 let total_after_discount = total_order - discount;
 total_after_discount = round_off(total_after_discount);
 
-let tax = 0.625 * total_order;
+let tax = 0.625 * total_after_discount;
 tax = round_off(tax);
 
 amount_to_pay = total_after_discount + tax;
