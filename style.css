@@ -11,7 +11,6 @@ html {
 
 body {
     overflow-x: hidden; /*avoid overflow on the x axis*/
-    overflow-y: hidden;
 }
 
 .head {
