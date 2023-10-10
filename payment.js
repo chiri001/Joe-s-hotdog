@@ -93,7 +93,7 @@ let total_after_discount = total_order - discount;
 total_after_discount = round_off(total_after_discount);
 
 //store the tax amount
-let tax = 0.625 * total_after_discount;
+let tax = 0.0625 * total_after_discount;
 tax = round_off(tax);
 
 //stores the balance to be paid
