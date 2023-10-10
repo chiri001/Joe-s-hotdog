@@ -16,7 +16,7 @@ body {
 .head {
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: center; /*centers the logo on the page */
     width: 100%;
     z-index: 10;
     position: sticky;
@@ -30,7 +30,7 @@ body {
 
 .home-items {
     display: flex;
-    flex: wrap;
+    flex: wrap; /*items should wrap down to available space */
     justify-content: space-between;
     width: 100%;
 }
@@ -47,13 +47,13 @@ body {
 
 .home-text {
     display: flex;
-    flex-basis: 30%;
+    flex-basis: 30%; /*cover 30% of screen on screens > 900px */
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; /*arrange items vertically */
     height: 40%;
     margin: 4%;
     padding: 2%;
-    border-radius: 10px;
+    border-radius: 10px; /*adding radius around box */
     background-color: #dde5db;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /*adding shadow around */
 }
@@ -93,7 +93,7 @@ body {
 }
 
 .payment {
-    flex-basis: 60%;
+    flex-basis: 60%; /*cover 60% of page */
 }
 
 .menu {
@@ -111,7 +111,7 @@ body {
 .menu-image img {
     width: 80%;
     height: 80%;
-    object-fit: cover;
+    object-fit: cover; /*images have same size and stretch evenly */
 }
 
 .footer {
@@ -141,7 +141,7 @@ body {
 
 .item-header h2,
 .item-details h2 {
-    flex-basis: 25%;
+    flex-basis: 25%; /*divide container to equal 4 parts */
 }
 
 .amount-info h2 {
@@ -169,14 +169,14 @@ body {
 
 @media only screen and (max-width: 1000px) {
     #home {
-        height: auto;
+        height: auto; /*adjust height to page content */
     }
     .home-items {
         flex-direction: column;
     }
 
     .home-text {
-        flex-basis: 100%;
+        flex-basis: 100%; /*cover 100% of width */
     }
 
     .home-text h1 {
